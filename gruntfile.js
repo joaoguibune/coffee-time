@@ -4,7 +4,7 @@ module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
 
     var config = {
-        app: ''
+        app: 'app/'
     };
 
     grunt.initConfig({
@@ -77,16 +77,16 @@ module.exports = function (grunt) {
                     style: 'expanded',
                     lineNumbers: true,
                     includePaths: [
-                        'Assets/js/vendor/bourbon/app/assets/stylesheets/',
-                        'Assets/js/vendor/neat/app/assets/stylesheets/',
-                        'Assets/js/vendor/normalize-scss/'
+                        'bower_components/bourbon/app/assets/stylesheets/',
+                        'bower_components/neat/app/assets/stylesheets/',
+                        'bower_components/normalize-scss/'
                     ],
                 },
                 files: [{
                     expand: true,
-                    cwd: '<%= config.app %>Assets/scss',
+                    cwd: '<%= config.app %>styles',
                     src: ['*.scss'],
-                    dest: '<%= config.app %>Assets/css',
+                    dest: 'css',
                     ext: '.css'
                 }]
             }
@@ -96,11 +96,11 @@ module.exports = function (grunt) {
             options: {
                 jshintrc: '.jshintrc',
                 reporter: require('jshint-stylish'),
-                ignores: ['Assets/js/vendor/**/*.js']
+                ignores: ['bower_components/**/*.js']
             },
             all: [
                 'Gruntfile.js',
-                '<%= config.app %>Assets/js/**/*.js'
+                '<%= config.app %>scripts/**/*.js'
             ]
         },
 
@@ -108,8 +108,8 @@ module.exports = function (grunt) {
             icomoon: {
                 options: {
                     src: './icomoon.zip',
-                    cssDest: '<%= config.app %>Assets/scss/_icons.scss',
-                    fontsDest: '<%= config.app %>Assets/fonts/icomoon',
+                    cssDest: '<%= config.app %>styles/_icons.scss',
+                    fontsDest: '<%= config.app %>fonts/icomoon',
                     fontsUrl: '../fonts/icomoon'
                 }
             }

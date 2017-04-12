@@ -1,8 +1,8 @@
 {
-  "name": "webSetup",
-  "author": "Lidia Freitas <lydiaoliveira@gmail.com>",
+  "name": "moviesWatched",
+  "authors": " João Buch <buch2206@gmail.com>",
   "version": "1.0.0",
-  "description": "A default structure to set up your web projects",
+  "description": "A project to show my abilities with angular and scss",
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

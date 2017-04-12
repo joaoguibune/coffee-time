@@ -2,15 +2,14 @@
 <html ng-app="filmes">
 <head>
     <meta charset="UTF-8">
-    <title>Filmes que já assisti</title>
+    <title>Movies Watched</title>
 
     <link rel="stylesheet" href="css/style.css">
 
     <script src="bower_components/angular.min.js"></script>
     <script src="scripts/app.js"></script>
-    <script src="scripts/filmes.controller.js"></script>
-    <script src="scripts/directives/filme.directive.js"></script>
-    <script src="scripts/factorys/meus-filmes.factory.js"></script>
+    <script src="scripts/movies.controller.js"></script>
+    
 </head>
 <body>
     <div class="container" ng-controller="FilmesController">
@@ -25,11 +24,11 @@
         <form name="formulario" class="form-filmes" ng-submit="criarFilme()">
             <h1>Adicionar Filme</h1>
             <div class="form-campo">
-                <label for="titulo">Título</label>
+                <label for="titulo">Tï¿½tulo</label>
                 <input type="text" id="titulo" name="titulo" ng-model="novoFilme.titulo">
             </div>
             <div class="form-campo pequeno">
-                <label for="ano">Ano de Lançamento</label>
+                <label for="ano">Ano de Lanï¿½amento</label>
                 <input type="number" id="ano" name="ano" ng-model="novoFilme.ano">
             </div>
             <div class="form-campo medio">
@@ -41,7 +40,7 @@
                 <input type="text" id="cartaz" name="cartaz" ng-model="novoFilme.cartaz">
             </div>
             <div class="form-campo">
-                <label for="sinopse">Sinópse</label>
+                <label for="sinopse">Sinï¿½pse</label>
                 <textarea id="sinopse" name="sinopse" ng-model="novoFilme.sinopse" rows="5"></textarea>
             </div>
 

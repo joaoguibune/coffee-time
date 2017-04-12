@@ -5,7 +5,7 @@ angular.module("movies").directive("awFilme", function () {
       filme: '=awFilme',
       fnFechar: '&'
     },
-    templateUrl: "movie.directive.html",
+    templateUrl: "scripts/components/movieDirective/movie.directive.html",
     link: function (scope, element, attr) {
       element.addClass('filme com-cartaz');
 

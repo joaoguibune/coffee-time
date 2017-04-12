@@ -551,16 +551,16 @@ th {
 }
 
 /* line 4, ../../app/styles/atoms/_forms.scss */
-.form label {
+.form label, .form-filmes label {
   margin: 0;
   padding: 11px 16px 0 0;
   font-size: 1.4rem;
   line-height: 1.6rem;
   font-weight: 700;
-  color: #1b1d21;
+  color: #333;
 }
 /* line 13, ../../app/styles/atoms/_forms.scss */
-.form fieldset {
+.form fieldset, .form-filmes fieldset {
   margin-top: 0;
   margin-bottom: 20px;
   padding: 0;
@@ -569,7 +569,7 @@ th {
   border: none;
 }
 /* line 21, ../../app/styles/atoms/_forms.scss */
-.form fieldset small {
+.form fieldset small, .form-filmes fieldset small {
   margin: 0;
   padding: 7px 8px 3px;
   font-size: 1.1rem;
@@ -588,20 +588,20 @@ th {
   border-bottom-right-radius: 4px;
 }
 /* line 39, ../../app/styles/atoms/_forms.scss */
-.form fieldset.cmp-btns {
+.form fieldset.cmp-btns, .form-filmes fieldset.cmp-btns {
   padding-top: 23px;
 }
 /* line 44, ../../app/styles/atoms/_forms.scss */
-.form input:not([type="radio"]):not([type="checkbox"]), .form textarea, .form select {
+.form input:not([type="radio"]):not([type="checkbox"]), .form-filmes input:not([type="radio"]):not([type="checkbox"]), .form textarea, .form-filmes textarea, .form select, .form-filmes select {
   margin: 0;
   padding: 0 10px;
   display: block;
   width: 100%;
-  height: 50px;
+  height: 3.2rem;
   font-size: 1.3rem;
   line-height: 3.20rem;
-  color: #32363d;
-  border: 1px solid #494e59;
+  color: #4d4d4d;
+  border: 0.1rem solid #666666;
   overflow: hidden;
   position: relative;
   top: 0;
@@ -611,24 +611,24 @@ th {
   -webkit-appearance: none;
   box-shadow: none;
 }
-/* line 66, ../../app/styles/atoms/_forms.scss */
-.form textarea {
+/* line 67, ../../app/styles/atoms/_forms.scss */
+.form textarea, .form-filmes textarea {
   padding: 0 0 0 10px;
   resize: none;
   min-height: 200px;
   overflow-y: auto;
 }
-/* line 73, ../../app/styles/atoms/_forms.scss */
-.form input[type="search"] {
+/* line 74, ../../app/styles/atoms/_forms.scss */
+.form input[type="search"], .form-filmes input[type="search"] {
   -webkit-padding-start: 0;
 }
-/* line 75, ../../app/styles/atoms/_forms.scss */
-.form .radio {
+/* line 76, ../../app/styles/atoms/_forms.scss */
+.form .radio, .form-filmes .radio {
   width: 100%;
   padding: 8px 0 0;
 }
-/* line 79, ../../app/styles/atoms/_forms.scss */
-.form .radio > span {
+/* line 80, ../../app/styles/atoms/_forms.scss */
+.form .radio > span, .form-filmes .radio > span {
   width: auto;
   margin: 1rem 2rem 1rem 0;
   padding: 0;
@@ -638,13 +638,13 @@ th {
   left: 0;
 }
 @media screen and (min-device-width: 320px) and (max-device-width: 640px) {
-  /* line 79, ../../app/styles/atoms/_forms.scss */
-  .form .radio > span {
+  /* line 80, ../../app/styles/atoms/_forms.scss */
+  .form .radio > span, .form-filmes .radio > span {
     margin: 0 0 20px;
   }
 }
-/* line 92, ../../app/styles/atoms/_forms.scss */
-.form .radio > span label {
+/* line 93, ../../app/styles/atoms/_forms.scss */
+.form .radio > span label, .form-filmes .radio > span label {
   width: 100%;
   height: auto;
   margin: 0;
@@ -659,8 +659,8 @@ th {
   z-index: 1;
   color: #ffcb08;
 }
-/* line 109, ../../app/styles/atoms/_forms.scss */
-.form .radio > span input[type="radio"] {
+/* line 110, ../../app/styles/atoms/_forms.scss */
+.form .radio > span input[type="radio"], .form-filmes .radio > span input[type="radio"] {
   width: 18px;
   height: 18px;
   border: none;
@@ -668,14 +668,14 @@ th {
   top: 1px;
   left: 1px;
 }
-/* line 117, ../../app/styles/atoms/_forms.scss */
-.form .radio > span input[type="radio"] + label:before {
+/* line 118, ../../app/styles/atoms/_forms.scss */
+.form .radio > span input[type="radio"] + label:before, .form-filmes .radio > span input[type="radio"] + label:before {
   margin: 0;
   content: '';
   position: absolute;
   left: 0;
   top: 0;
-  border: 0.2rem solid #494e59;
+  border: 0.2rem solid #666666;
   background: #FFF;
   cursor: pointer;
   display: inline-block;
@@ -690,24 +690,24 @@ th {
   border-bottom-right-radius: 50%;
   transition: all 0.1s linear 0.1s;
 }
-/* line 137, ../../app/styles/atoms/_forms.scss */
-.form .radio > span input[type="radio"]:checked + label:before {
+/* line 138, ../../app/styles/atoms/_forms.scss */
+.form .radio > span input[type="radio"]:checked + label:before, .form-filmes .radio > span input[type="radio"]:checked + label:before {
   background: #FFF;
-  border: 0.7rem solid #494e59;
+  border: 0.7rem solid #666666;
 }
-/* line 144, ../../app/styles/atoms/_forms.scss */
-.form .radio small {
+/* line 145, ../../app/styles/atoms/_forms.scss */
+.form .radio small, .form-filmes .radio small {
   top: 0;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
-/* line 150, ../../app/styles/atoms/_forms.scss */
-.form .checkbox {
+/* line 151, ../../app/styles/atoms/_forms.scss */
+.form .checkbox, .form-filmes .checkbox {
   width: 100%;
   padding: 8px 0 0;
 }
-/* line 154, ../../app/styles/atoms/_forms.scss */
-.form .checkbox > span {
+/* line 155, ../../app/styles/atoms/_forms.scss */
+.form .checkbox > span, .form-filmes .checkbox > span {
   width: auto;
   margin: 0 0 10px;
   padding: 0;
@@ -717,13 +717,13 @@ th {
   left: 0;
 }
 @media screen and (min-device-width: 320px) and (max-device-width: 640px) {
-  /* line 154, ../../app/styles/atoms/_forms.scss */
-  .form .checkbox > span {
+  /* line 155, ../../app/styles/atoms/_forms.scss */
+  .form .checkbox > span, .form-filmes .checkbox > span {
     margin: 0 0 20px;
   }
 }
-/* line 168, ../../app/styles/atoms/_forms.scss */
-.form .checkbox > span label {
+/* line 169, ../../app/styles/atoms/_forms.scss */
+.form .checkbox > span label, .form-filmes .checkbox > span label {
   width: 100%;
   height: auto;
   margin: 0;
@@ -736,24 +736,24 @@ th {
   left: 0;
   top: 0;
   z-index: 1;
-  color: #797979;
+  color: #333333;
 }
-/* line 184, ../../app/styles/atoms/_forms.scss */
-.form .checkbox > span input[type="checkbox"] {
+/* line 185, ../../app/styles/atoms/_forms.scss */
+.form .checkbox > span input[type="checkbox"], .form-filmes .checkbox > span input[type="checkbox"] {
   width: 18px;
   height: 20px;
   border: none;
   position: absolute;
   border-right: none;
 }
-/* line 191, ../../app/styles/atoms/_forms.scss */
-.form .checkbox > span input[type="checkbox"] + label:before {
+/* line 192, ../../app/styles/atoms/_forms.scss */
+.form .checkbox > span input[type="checkbox"] + label:before, .form-filmes .checkbox > span input[type="checkbox"] + label:before {
   margin: 0;
   content: '';
   position: absolute;
   left: 0;
   top: 0;
-  background-color: #494e59;
+  background-color: #666666;
   cursor: pointer;
   display: inline-block;
   width: 20px;
@@ -767,25 +767,25 @@ th {
   border-bottom-right-radius: 4px;
   transition: all 0.1s linear 0.1s;
 }
-/* line 210, ../../app/styles/atoms/_forms.scss */
-.form .checkbox > span input[type="checkbox"]:checked + label:before {
+/* line 211, ../../app/styles/atoms/_forms.scss */
+.form .checkbox > span input[type="checkbox"]:checked + label:before, .form-filmes .checkbox > span input[type="checkbox"]:checked + label:before {
   content: '\2714';
-  color: #1b1d21;
+  color: #333;
   transition: all 0.2s linear 0s;
 }
-/* line 218, ../../app/styles/atoms/_forms.scss */
-.form .checkbox small {
+/* line 219, ../../app/styles/atoms/_forms.scss */
+.form .checkbox small, .form-filmes .checkbox small {
   top: 0;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
-/* line 224, ../../app/styles/atoms/_forms.scss */
-.form .switch {
+/* line 225, ../../app/styles/atoms/_forms.scss */
+.form .switch, .form-filmes .switch {
   width: 100%;
   padding: 8px 0 0;
 }
-/* line 228, ../../app/styles/atoms/_forms.scss */
-.form .switch > span {
+/* line 229, ../../app/styles/atoms/_forms.scss */
+.form .switch > span, .form-filmes .switch > span {
   width: auto;
   margin: 0 0 10px;
   padding: 0;
@@ -794,8 +794,8 @@ th {
   top: 0;
   left: 0;
 }
-/* line 237, ../../app/styles/atoms/_forms.scss */
-.form .switch > span label {
+/* line 238, ../../app/styles/atoms/_forms.scss */
+.form .switch > span label, .form-filmes .switch > span label {
   width: 100%;
   height: auto;
   margin: 0;
@@ -809,16 +809,16 @@ th {
   z-index: 1;
   font-size: 1.7rem !important;
 }
-/* line 252, ../../app/styles/atoms/_forms.scss */
-.form .switch > span input[type="checkbox"] {
+/* line 253, ../../app/styles/atoms/_forms.scss */
+.form .switch > span input[type="checkbox"], .form-filmes .switch > span input[type="checkbox"] {
   width: 18px;
   height: 25px;
   border: none;
   position: absolute;
   border-right: none;
 }
-/* line 259, ../../app/styles/atoms/_forms.scss */
-.form .switch > span input[type="checkbox"] + label:before, .form .switch > span input[type="checkbox"] + label:after {
+/* line 260, ../../app/styles/atoms/_forms.scss */
+.form .switch > span input[type="checkbox"] + label:before, .form-filmes .switch > span input[type="checkbox"] + label:before, .form .switch > span input[type="checkbox"] + label:after, .form-filmes .switch > span input[type="checkbox"] + label:after {
   margin: 0;
   content: '';
   position: absolute;
@@ -837,8 +837,8 @@ th {
   border-bottom-right-radius: 4px;
   transition: all 0.1s linear 0.1s;
 }
-/* line 278, ../../app/styles/atoms/_forms.scss */
-.form .switch > span input[type="checkbox"] + label:after {
+/* line 279, ../../app/styles/atoms/_forms.scss */
+.form .switch > span input[type="checkbox"] + label:after, .form-filmes .switch > span input[type="checkbox"] + label:after {
   width: 22px;
   height: 20px;
   top: 2px;
@@ -852,13 +852,13 @@ th {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
 }
-/* line 292, ../../app/styles/atoms/_forms.scss */
-.form .switch > span input[type="checkbox"]:checked + label:after {
+/* line 293, ../../app/styles/atoms/_forms.scss */
+.form .switch > span input[type="checkbox"]:checked + label:after, .form-filmes .switch > span input[type="checkbox"]:checked + label:after {
   margin-left: 26px;
   box-shadow: inset 0 -3px 1px rgba(0, 0, 0, 0.4);
 }
-/* line 301, ../../app/styles/atoms/_forms.scss */
-.form .select {
+/* line 302, ../../app/styles/atoms/_forms.scss */
+.form .select, .form-filmes .select {
   margin: 0;
   padding: 0;
   position: relative;
@@ -869,10 +869,10 @@ th {
   height: 50px;
   background: #FFF;
   overflow: hidden;
-  border: 1px solid #494e59;
+  border: 1px solid #666666;
 }
-/* line 314, ../../app/styles/atoms/_forms.scss */
-.form .select:after {
+/* line 315, ../../app/styles/atoms/_forms.scss */
+.form .select:after, .form-filmes .select:after {
   margin: 0;
   padding: 0;
   content: '\25be';
@@ -889,8 +889,8 @@ th {
   pointer-events: none;
   z-index: 1;
 }
-/* line 332, ../../app/styles/atoms/_forms.scss */
-.form .select select {
+/* line 333, ../../app/styles/atoms/_forms.scss */
+.form .select select, .form-filmes .select select {
   padding: 10px;
   padding-top: 11px;
   background-color: #FFF;
@@ -909,49 +909,49 @@ th {
   appearance: none;
   cursor: pointer;
 }
-/* line 353, ../../app/styles/atoms/_forms.scss */
-.form .select option {
+/* line 354, ../../app/styles/atoms/_forms.scss */
+.form .select option, .form-filmes .select option {
   padding: 10px;
   border-bottom: 1px  solid #F2F2F2;
 }
-/* line 359, ../../app/styles/atoms/_forms.scss */
-.form .select optgroup {
+/* line 360, ../../app/styles/atoms/_forms.scss */
+.form .select optgroup, .form-filmes .select optgroup {
   padding: 0 10px;
   color: #000;
   background-color: #FFF;
 }
-/* line 365, ../../app/styles/atoms/_forms.scss */
-.form .select optgroup[label] {
+/* line 366, ../../app/styles/atoms/_forms.scss */
+.form .select optgroup[label], .form-filmes .select optgroup[label] {
   padding-top: 10px;
   background-color: #FFF;
   font-style: normal;
 }
-/* line 371, ../../app/styles/atoms/_forms.scss */
-.form .select optgroup option {
+/* line 372, ../../app/styles/atoms/_forms.scss */
+.form .select optgroup option, .form-filmes .select optgroup option {
   border-bottom: 1px solid #F2F2F2;
   font-family: sans-serif;
   font-size: 12px;
   line-height: 40px;
 }
-/* line 378, ../../app/styles/atoms/_forms.scss */
-.form .select optgroup option:first-child {
+/* line 379, ../../app/styles/atoms/_forms.scss */
+.form .select optgroup option:first-child, .form-filmes .select optgroup option:first-child {
   margin: 10px 0 0 0;
   border-top: 1px solid #F2F2F2;
 }
-/* line 387, ../../app/styles/atoms/_forms.scss */
-.form .loading {
+/* line 388, ../../app/styles/atoms/_forms.scss */
+.form .loading, .form-filmes .loading {
   padding-right: 46px;
   background-color: #25A35A;
   position: relative;
   cursor: default;
   color: #FFF;
 }
-/* line 388, ../../app/styles/atoms/_forms.scss */
-.form .loading:hover {
+/* line 389, ../../app/styles/atoms/_forms.scss */
+.form .loading:hover, .form-filmes .loading:hover {
   background-color: #25A35A;
 }
-/* line 389, ../../app/styles/atoms/_forms.scss */
-.form .loading:after {
+/* line 390, ../../app/styles/atoms/_forms.scss */
+.form .loading:after, .form-filmes .loading:after {
   margin: -10px 0 0 0;
   content: '';
   width: 20px;
@@ -962,21 +962,21 @@ th {
   right: 16px;
   animation: spinner 1.0s infinite linear reverse;
 }
-/* line 391, ../../app/styles/atoms/_forms.scss */
-.form .successful {
+/* line 392, ../../app/styles/atoms/_forms.scss */
+.form .successful, .form-filmes .successful {
   padding-right: 46px;
   background-color: #25A35A;
   position: relative;
   cursor: default;
   color: #FFF;
 }
-/* line 392, ../../app/styles/atoms/_forms.scss */
-.form .successful:hover {
+/* line 393, ../../app/styles/atoms/_forms.scss */
+.form .successful:hover, .form-filmes .successful:hover {
   border-color: #25A35A;
   background-color: #25A35A;
 }
-/* line 393, ../../app/styles/atoms/_forms.scss */
-.form .successful:after {
+/* line 394, ../../app/styles/atoms/_forms.scss */
+.form .successful:after, .form-filmes .successful:after {
   content: '\2714';
   width: 20px;
   height: 20px;
@@ -986,16 +986,16 @@ th {
   top: 10px;
   right: 16px;
 }
-/* line 395, ../../app/styles/atoms/_forms.scss */
-.form .failure {
+/* line 396, ../../app/styles/atoms/_forms.scss */
+.form .failure, .form-filmes .failure {
   padding-right: 46px;
   background-color: #E74C3C;
   position: relative;
   cursor: default;
   color: #FFF;
 }
-/* line 396, ../../app/styles/atoms/_forms.scss */
-.form .failure:after {
+/* line 397, ../../app/styles/atoms/_forms.scss */
+.form .failure:after, .form-filmes .failure:after {
   content: '\00D7';
   width: 20px;
   height: 20px;
@@ -1005,8 +1005,8 @@ th {
   top: 10px;
   right: 16px;
 }
-/* line 397, ../../app/styles/atoms/_forms.scss */
-.form .failure:hover {
+/* line 398, ../../app/styles/atoms/_forms.scss */
+.form .failure:hover, .form-filmes .failure:hover {
   background-color: #E74C3C;
   border-color: #E74C3C;
 }
@@ -1020,139 +1020,1102 @@ th {
     -webkit-transform: rotate(-360deg);
   }
 }
-/* line 410, ../../app/styles/atoms/_forms.scss */
-.form input:not(:focus):invalid {
+/* line 411, ../../app/styles/atoms/_forms.scss */
+.form input:not(:focus):invalid, .form-filmes input:not(:focus):invalid {
   box-shadow: none;
 }
-/* line 412, ../../app/styles/atoms/_forms.scss */
-.form input.invalido, .form .select.invalido, .form input[type="checkbox"].invalido + label:before, .form input[type="radio"].invalido + label:before {
+/* line 413, ../../app/styles/atoms/_forms.scss */
+.form input.invalido, .form-filmes input.invalido, .form .select.invalido, .form-filmes .select.invalido, .form input[type="checkbox"].invalido + label:before, .form-filmes input[type="checkbox"].invalido + label:before, .form input[type="radio"].invalido + label:before, .form-filmes input[type="radio"].invalido + label:before {
   color: #E74C3C;
   border: 2px solid #E74C3C;
   box-shadow: none;
 }
-/* line 420, ../../app/styles/atoms/_forms.scss */
-.form input.invalido::-webkit-input-placeholder,
+/* line 421, ../../app/styles/atoms/_forms.scss */
+.form input.invalido::-webkit-input-placeholder, .form-filmes input.invalido::-webkit-input-placeholder,
 .form input.invalido:-moz-placeholder,
+.form-filmes input.invalido:-moz-placeholder,
 .form input.invalido::-moz-placeholder,
-.form input.invalido:-ms-input-placeholder {
+.form-filmes input.invalido::-moz-placeholder,
+.form input.invalido:-ms-input-placeholder,
+.form-filmes input.invalido:-ms-input-placeholder {
   color: #E74C3C;
   opacity: 1;
 }
-/* line 426, ../../app/styles/atoms/_forms.scss */
-.form input.invalido + small, .form .select.invalido + small, .form .checkbox.invalido small, .form .radio.invalido small {
+/* line 427, ../../app/styles/atoms/_forms.scss */
+.form input.invalido + small, .form-filmes input.invalido + small, .form .select.invalido + small, .form-filmes .select.invalido + small, .form .checkbox.invalido small, .form-filmes .checkbox.invalido small, .form .radio.invalido small, .form-filmes .radio.invalido small {
   opacity: 1;
   height: 20px;
   filter: alpha(opacity="100");
 }
-/* line 432, ../../app/styles/atoms/_forms.scss */
-.form ::-webkit-input-placeholder {
-  color: #333;
-  opacity: .5;
-}
 /* line 433, ../../app/styles/atoms/_forms.scss */
-.form :-moz-placeholder {
+.form ::-webkit-input-placeholder, .form-filmes ::-webkit-input-placeholder {
   color: #333;
   opacity: .5;
 }
 /* line 434, ../../app/styles/atoms/_forms.scss */
-.form ::-moz-placeholder {
+.form :-moz-placeholder, .form-filmes :-moz-placeholder {
   color: #333;
   opacity: .5;
 }
 /* line 435, ../../app/styles/atoms/_forms.scss */
-.form :-ms-input-placeholder {
+.form ::-moz-placeholder, .form-filmes ::-moz-placeholder {
   color: #333;
   opacity: .5;
 }
-/* line 437, ../../app/styles/atoms/_forms.scss */
-.form :focus::-webkit-input-placeholder {
+/* line 436, ../../app/styles/atoms/_forms.scss */
+.form :-ms-input-placeholder, .form-filmes :-ms-input-placeholder {
   color: #333;
-  opacity: 1;
+  opacity: .5;
 }
 /* line 438, ../../app/styles/atoms/_forms.scss */
-.form :focus:-moz-placeholder {
+.form :focus::-webkit-input-placeholder, .form-filmes :focus::-webkit-input-placeholder {
   color: #333;
   opacity: 1;
 }
 /* line 439, ../../app/styles/atoms/_forms.scss */
-.form :focus::-moz-placeholder {
+.form :focus:-moz-placeholder, .form-filmes :focus:-moz-placeholder {
   color: #333;
   opacity: 1;
 }
 /* line 440, ../../app/styles/atoms/_forms.scss */
-.form :focus:-ms-input-placeholder {
+.form :focus::-moz-placeholder, .form-filmes :focus::-moz-placeholder {
   color: #333;
   opacity: 1;
 }
-/* line 442, ../../app/styles/atoms/_forms.scss */
-.form input:focus {
-  color: #000;
-  border-color: #999;
-  outline: none;
+/* line 441, ../../app/styles/atoms/_forms.scss */
+.form :focus:-ms-input-placeholder, .form-filmes :focus:-ms-input-placeholder {
+  color: #333;
+  opacity: 1;
 }
 /* line 443, ../../app/styles/atoms/_forms.scss */
-.form textarea:focus {
+.form input:focus, .form-filmes input:focus {
   color: #000;
   border-color: #999;
   outline: none;
 }
 /* line 444, ../../app/styles/atoms/_forms.scss */
-.form select:focus {
+.form textarea:focus, .form-filmes textarea:focus {
+  color: #000;
+  border-color: #999;
+  outline: none;
+}
+/* line 445, ../../app/styles/atoms/_forms.scss */
+.form select:focus, .form-filmes select:focus {
   color: #000;
   border-color: #999;
   outline: none;
 }
 
+/* line 27, ../../app/styles/atoms/_buttons.scss */
+.btn-blue-small, .btn-blue-center, .btn-blue-big, .btn-gray-small, .btn-gray-big, .btn-darkgray-small, .btn-darkgray-big, .btn-red-small, .btn-red-big, .btn-orange-small, .btn-orange-big, .btn-green-small, .btn-green-big, .btn-white-small, .btn-cancelar, .btn-cancelar-center, .btn-white-big, .btn-transparent-small, .btn-transparent-big {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-shadow: none;
+  text-decoration: none;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  transition: all, 0.2s, ease-in-out;
+}
+/* line 40, ../../app/styles/atoms/_buttons.scss */
+.loading.btn-blue-small, .loading.btn-blue-center, .loading.btn-blue-big, .loading.btn-gray-small, .loading.btn-gray-big, .loading.btn-darkgray-small, .loading.btn-darkgray-big, .loading.btn-red-small, .loading.btn-red-big, .loading.btn-orange-small, .loading.btn-orange-big, .loading.btn-green-small, .loading.btn-green-big, .loading.btn-white-small, .loading.btn-cancelar, .loading.btn-cancelar-center, .loading.btn-white-big, .loading.btn-transparent-small, .loading.btn-transparent-big {
+  padding-right: 4.6rem;
+  cursor: default;
+  position: relative;
+}
+/* line 45, ../../app/styles/atoms/_buttons.scss */
+.loading.btn-blue-small:after, .loading.btn-blue-center:after, .loading.btn-blue-big:after, .loading.btn-gray-small:after, .loading.btn-gray-big:after, .loading.btn-darkgray-small:after, .loading.btn-darkgray-big:after, .loading.btn-red-small:after, .loading.btn-red-big:after, .loading.btn-orange-small:after, .loading.btn-orange-big:after, .loading.btn-green-small:after, .loading.btn-green-big:after, .loading.btn-white-small:after, .loading.btn-cancelar:after, .loading.btn-cancelar-center:after, .loading.btn-white-big:after, .loading.btn-transparent-small:after, .loading.btn-transparent-big:after {
+  margin: -1.0rem 0 0 0;
+  content: '';
+  width: 2.0rem;
+  height: 2.0rem;
+  background: transparent url("../img/loading.png") no-repeat center;
+  background-size: 1.4rem;
+  position: absolute;
+  top: 50%;
+  right: 1.6rem;
+  animation: spinner-transition 1s infinite linear reverse;
+}
+
+/* line 113, ../../app/styles/atoms/_buttons.scss */
+.btn-blue-small, .btn-blue-center {
+  color: #fff;
+  background-color: #397999;
+  border: none;
+  padding: 0 2rem;
+  line-height: 3.2rem;
+  font-size: 1.1rem;
+}
+/* line 75, ../../app/styles/atoms/_buttons.scss */
+.btn-blue-small:hover, .btn-blue-center:hover {
+  background: #3b5664;
+}
+/* line 79, ../../app/styles/atoms/_buttons.scss */
+.btn-blue-small[disabled], [disabled].btn-blue-center {
+  opacity: 0.3;
+  cursor: default;
+}
+/* line 84, ../../app/styles/atoms/_buttons.scss */
+.btn-blue-small.ripple, .ripple.btn-blue-center {
+  overflow: hidden;
+  position: relative;
+}
+/* line 88, ../../app/styles/atoms/_buttons.scss */
+.btn-blue-small.border, .border.btn-blue-center {
+  border: solid 0.1rem;
+}
+/* line 115, ../../app/styles/atoms/_buttons.scss */
+.btn-blue-small.border, .border.btn-blue-center {
+  border-color: #fff;
+}
+
+/* line 120, ../../app/styles/atoms/_buttons.scss */
+.btn-blue-big {
+  color: #fff;
+  background-color: #397999;
+  border: none;
+  padding: 0 3rem;
+  line-height: 5.2rem;
+  font-size: 1.8rem;
+}
+/* line 75, ../../app/styles/atoms/_buttons.scss */
+.btn-blue-big:hover {
+  background: #3b5664;
+}
+/* line 79, ../../app/styles/atoms/_buttons.scss */
+.btn-blue-big[disabled] {
+  opacity: 0.3;
+  cursor: default;
+}
+/* line 84, ../../app/styles/atoms/_buttons.scss */
+.btn-blue-big.ripple {
+  overflow: hidden;
+  position: relative;
+}
+/* line 88, ../../app/styles/atoms/_buttons.scss */
+.btn-blue-big.border {
+  border: solid 0.1rem;
+}
+/* line 122, ../../app/styles/atoms/_buttons.scss */
+.btn-blue-big.border {
+  border-color: #fff;
+}
+
+/* line 130, ../../app/styles/atoms/_buttons.scss */
+.btn-cancelar, .btn-cancelar-center {
+  padding: 0 1.5rem;
+  border: solid 1px #397999;
+}
+
+/* line 135, ../../app/styles/atoms/_buttons.scss */
+.btn-fechar {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  box-pack: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  padding: 2rem 0;
+}
+/* line 140, ../../app/styles/atoms/_buttons.scss */
+.btn-fechar.footer {
+  padding: 0;
+}
+
+/* line 145, ../../app/styles/atoms/_buttons.scss */
+.btn-blue-center {
+  margin: 0 auto;
+  display: block;
+  float: none !important;
+  padding: 0 3rem;
+}
+
+/* line 153, ../../app/styles/atoms/_buttons.scss */
+.btn-cancelar-center {
+  margin: 0 auto;
+  display: block;
+  float: none !important;
+  padding: 0 3rem;
+}
+
+/* line 113, ../../app/styles/atoms/_buttons.scss */
+.btn-gray-small {
+  color: #666;
+  background-color: #eeeeee;
+  border: none;
+  padding: 0 2rem;
+  line-height: 3.2rem;
+  font-size: 1.1rem;
+}
+/* line 75, ../../app/styles/atoms/_buttons.scss */
+.btn-gray-small:hover {
+  background: #d5d5d5;
+}
+/* line 79, ../../app/styles/atoms/_buttons.scss */
+.btn-gray-small[disabled] {
+  opacity: 0.3;
+  cursor: default;
+}
+/* line 84, ../../app/styles/atoms/_buttons.scss */
+.btn-gray-small.ripple {
+  overflow: hidden;
+  position: relative;
+}
+/* line 88, ../../app/styles/atoms/_buttons.scss */
+.btn-gray-small.border {
+  border: solid 0.1rem;
+}
+/* line 115, ../../app/styles/atoms/_buttons.scss */
+.btn-gray-small.border {
+  border-color: #666;
+}
+
+/* line 120, ../../app/styles/atoms/_buttons.scss */
+.btn-gray-big {
+  color: #666;
+  background-color: #eeeeee;
+  border: none;
+  padding: 0 3rem;
+  line-height: 5.2rem;
+  font-size: 1.8rem;
+}
+/* line 75, ../../app/styles/atoms/_buttons.scss */
+.btn-gray-big:hover {
+  background: #d5d5d5;
+}
+/* line 79, ../../app/styles/atoms/_buttons.scss */
+.btn-gray-big[disabled] {
+  opacity: 0.3;
+  cursor: default;
+}
+/* line 84, ../../app/styles/atoms/_buttons.scss */
+.btn-gray-big.ripple {
+  overflow: hidden;
+  position: relative;
+}
+/* line 88, ../../app/styles/atoms/_buttons.scss */
+.btn-gray-big.border {
+  border: solid 0.1rem;
+}
+/* line 122, ../../app/styles/atoms/_buttons.scss */
+.btn-gray-big.border {
+  border-color: #666;
+}
+
+/* line 130, ../../app/styles/atoms/_buttons.scss */
+.btn-cancelar, .btn-cancelar-center {
+  padding: 0 1.5rem;
+  border: solid 1px #397999;
+}
+
+/* line 135, ../../app/styles/atoms/_buttons.scss */
+.btn-fechar {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  box-pack: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  padding: 2rem 0;
+}
+/* line 140, ../../app/styles/atoms/_buttons.scss */
+.btn-fechar.footer {
+  padding: 0;
+}
+
+/* line 145, ../../app/styles/atoms/_buttons.scss */
+.btn-blue-center {
+  margin: 0 auto;
+  display: block;
+  float: none !important;
+  padding: 0 3rem;
+}
+
+/* line 153, ../../app/styles/atoms/_buttons.scss */
+.btn-cancelar-center {
+  margin: 0 auto;
+  display: block;
+  float: none !important;
+  padding: 0 3rem;
+}
+
+/* line 113, ../../app/styles/atoms/_buttons.scss */
+.btn-darkgray-small {
+  color: #fff;
+  background-color: #9e9e9e;
+  border: none;
+  padding: 0 2rem;
+  line-height: 3.2rem;
+  font-size: 1.1rem;
+}
+/* line 75, ../../app/styles/atoms/_buttons.scss */
+.btn-darkgray-small:hover {
+  background: #858585;
+}
+/* line 79, ../../app/styles/atoms/_buttons.scss */
+.btn-darkgray-small[disabled] {
+  opacity: 0.3;
+  cursor: default;
+}
+/* line 84, ../../app/styles/atoms/_buttons.scss */
+.btn-darkgray-small.ripple {
+  overflow: hidden;
+  position: relative;
+}
+/* line 88, ../../app/styles/atoms/_buttons.scss */
+.btn-darkgray-small.border {
+  border: solid 0.1rem;
+}
+/* line 115, ../../app/styles/atoms/_buttons.scss */
+.btn-darkgray-small.border {
+  border-color: #fff;
+}
+
+/* line 120, ../../app/styles/atoms/_buttons.scss */
+.btn-darkgray-big {
+  color: #fff;
+  background-color: #9e9e9e;
+  border: none;
+  padding: 0 3rem;
+  line-height: 5.2rem;
+  font-size: 1.8rem;
+}
+/* line 75, ../../app/styles/atoms/_buttons.scss */
+.btn-darkgray-big:hover {
+  background: #858585;
+}
+/* line 79, ../../app/styles/atoms/_buttons.scss */
+.btn-darkgray-big[disabled] {
+  opacity: 0.3;
+  cursor: default;
+}
+/* line 84, ../../app/styles/atoms/_buttons.scss */
+.btn-darkgray-big.ripple {
+  overflow: hidden;
+  position: relative;
+}
+/* line 88, ../../app/styles/atoms/_buttons.scss */
+.btn-darkgray-big.border {
+  border: solid 0.1rem;
+}
+/* line 122, ../../app/styles/atoms/_buttons.scss */
+.btn-darkgray-big.border {
+  border-color: #fff;
+}
+
+/* line 130, ../../app/styles/atoms/_buttons.scss */
+.btn-cancelar, .btn-cancelar-center {
+  padding: 0 1.5rem;
+  border: solid 1px #397999;
+}
+
+/* line 135, ../../app/styles/atoms/_buttons.scss */
+.btn-fechar {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  box-pack: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  padding: 2rem 0;
+}
+/* line 140, ../../app/styles/atoms/_buttons.scss */
+.btn-fechar.footer {
+  padding: 0;
+}
+
+/* line 145, ../../app/styles/atoms/_buttons.scss */
+.btn-blue-center {
+  margin: 0 auto;
+  display: block;
+  float: none !important;
+  padding: 0 3rem;
+}
+
+/* line 153, ../../app/styles/atoms/_buttons.scss */
+.btn-cancelar-center {
+  margin: 0 auto;
+  display: block;
+  float: none !important;
+  padding: 0 3rem;
+}
+
+/* line 113, ../../app/styles/atoms/_buttons.scss */
+.btn-red-small {
+  color: #fff;
+  background-color: #ff675b;
+  border: none;
+  padding: 0 2rem;
+  line-height: 3.2rem;
+  font-size: 1.1rem;
+}
+/* line 75, ../../app/styles/atoms/_buttons.scss */
+.btn-red-small:hover {
+  background: #ea4a3e;
+}
+/* line 79, ../../app/styles/atoms/_buttons.scss */
+.btn-red-small[disabled] {
+  opacity: 0.3;
+  cursor: default;
+}
+/* line 84, ../../app/styles/atoms/_buttons.scss */
+.btn-red-small.ripple {
+  overflow: hidden;
+  position: relative;
+}
+/* line 88, ../../app/styles/atoms/_buttons.scss */
+.btn-red-small.border {
+  border: solid 0.1rem;
+}
+/* line 115, ../../app/styles/atoms/_buttons.scss */
+.btn-red-small.border {
+  border-color: #fff;
+}
+
+/* line 120, ../../app/styles/atoms/_buttons.scss */
+.btn-red-big {
+  color: #fff;
+  background-color: #ff675b;
+  border: none;
+  padding: 0 3rem;
+  line-height: 5.2rem;
+  font-size: 1.8rem;
+}
+/* line 75, ../../app/styles/atoms/_buttons.scss */
+.btn-red-big:hover {
+  background: #ea4a3e;
+}
+/* line 79, ../../app/styles/atoms/_buttons.scss */
+.btn-red-big[disabled] {
+  opacity: 0.3;
+  cursor: default;
+}
+/* line 84, ../../app/styles/atoms/_buttons.scss */
+.btn-red-big.ripple {
+  overflow: hidden;
+  position: relative;
+}
+/* line 88, ../../app/styles/atoms/_buttons.scss */
+.btn-red-big.border {
+  border: solid 0.1rem;
+}
+/* line 122, ../../app/styles/atoms/_buttons.scss */
+.btn-red-big.border {
+  border-color: #fff;
+}
+
+/* line 130, ../../app/styles/atoms/_buttons.scss */
+.btn-cancelar, .btn-cancelar-center {
+  padding: 0 1.5rem;
+  border: solid 1px #397999;
+}
+
+/* line 135, ../../app/styles/atoms/_buttons.scss */
+.btn-fechar {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  box-pack: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  padding: 2rem 0;
+}
+/* line 140, ../../app/styles/atoms/_buttons.scss */
+.btn-fechar.footer {
+  padding: 0;
+}
+
+/* line 145, ../../app/styles/atoms/_buttons.scss */
+.btn-blue-center {
+  margin: 0 auto;
+  display: block;
+  float: none !important;
+  padding: 0 3rem;
+}
+
+/* line 153, ../../app/styles/atoms/_buttons.scss */
+.btn-cancelar-center {
+  margin: 0 auto;
+  display: block;
+  float: none !important;
+  padding: 0 3rem;
+}
+
+/* line 113, ../../app/styles/atoms/_buttons.scss */
+.btn-orange-small {
+  color: #fff;
+  background-color: #f29c64;
+  border: none;
+  padding: 0 2rem;
+  line-height: 3.2rem;
+  font-size: 1.1rem;
+}
+/* line 75, ../../app/styles/atoms/_buttons.scss */
+.btn-orange-small:hover {
+  background: #d8834b;
+}
+/* line 79, ../../app/styles/atoms/_buttons.scss */
+.btn-orange-small[disabled] {
+  opacity: 0.3;
+  cursor: default;
+}
+/* line 84, ../../app/styles/atoms/_buttons.scss */
+.btn-orange-small.ripple {
+  overflow: hidden;
+  position: relative;
+}
+/* line 88, ../../app/styles/atoms/_buttons.scss */
+.btn-orange-small.border {
+  border: solid 0.1rem;
+}
+/* line 115, ../../app/styles/atoms/_buttons.scss */
+.btn-orange-small.border {
+  border-color: #fff;
+}
+
+/* line 120, ../../app/styles/atoms/_buttons.scss */
+.btn-orange-big {
+  color: #fff;
+  background-color: #f29c64;
+  border: none;
+  padding: 0 3rem;
+  line-height: 5.2rem;
+  font-size: 1.8rem;
+}
+/* line 75, ../../app/styles/atoms/_buttons.scss */
+.btn-orange-big:hover {
+  background: #d8834b;
+}
+/* line 79, ../../app/styles/atoms/_buttons.scss */
+.btn-orange-big[disabled] {
+  opacity: 0.3;
+  cursor: default;
+}
+/* line 84, ../../app/styles/atoms/_buttons.scss */
+.btn-orange-big.ripple {
+  overflow: hidden;
+  position: relative;
+}
+/* line 88, ../../app/styles/atoms/_buttons.scss */
+.btn-orange-big.border {
+  border: solid 0.1rem;
+}
+/* line 122, ../../app/styles/atoms/_buttons.scss */
+.btn-orange-big.border {
+  border-color: #fff;
+}
+
+/* line 130, ../../app/styles/atoms/_buttons.scss */
+.btn-cancelar, .btn-cancelar-center {
+  padding: 0 1.5rem;
+  border: solid 1px #397999;
+}
+
+/* line 135, ../../app/styles/atoms/_buttons.scss */
+.btn-fechar {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  box-pack: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  padding: 2rem 0;
+}
+/* line 140, ../../app/styles/atoms/_buttons.scss */
+.btn-fechar.footer {
+  padding: 0;
+}
+
+/* line 145, ../../app/styles/atoms/_buttons.scss */
+.btn-blue-center {
+  margin: 0 auto;
+  display: block;
+  float: none !important;
+  padding: 0 3rem;
+}
+
+/* line 153, ../../app/styles/atoms/_buttons.scss */
+.btn-cancelar-center {
+  margin: 0 auto;
+  display: block;
+  float: none !important;
+  padding: 0 3rem;
+}
+
+/* line 113, ../../app/styles/atoms/_buttons.scss */
+.btn-green-small {
+  color: #fff;
+  background-color: #a3d06d;
+  border: none;
+  padding: 0 2rem;
+  line-height: 3.2rem;
+  font-size: 1.1rem;
+}
+/* line 75, ../../app/styles/atoms/_buttons.scss */
+.btn-green-small:hover {
+  background: #88ab5f;
+}
+/* line 79, ../../app/styles/atoms/_buttons.scss */
+.btn-green-small[disabled] {
+  opacity: 0.3;
+  cursor: default;
+}
+/* line 84, ../../app/styles/atoms/_buttons.scss */
+.btn-green-small.ripple {
+  overflow: hidden;
+  position: relative;
+}
+/* line 88, ../../app/styles/atoms/_buttons.scss */
+.btn-green-small.border {
+  border: solid 0.1rem;
+}
+/* line 115, ../../app/styles/atoms/_buttons.scss */
+.btn-green-small.border {
+  border-color: #fff;
+}
+
+/* line 120, ../../app/styles/atoms/_buttons.scss */
+.btn-green-big {
+  color: #fff;
+  background-color: #a3d06d;
+  border: none;
+  padding: 0 3rem;
+  line-height: 5.2rem;
+  font-size: 1.8rem;
+}
+/* line 75, ../../app/styles/atoms/_buttons.scss */
+.btn-green-big:hover {
+  background: #88ab5f;
+}
+/* line 79, ../../app/styles/atoms/_buttons.scss */
+.btn-green-big[disabled] {
+  opacity: 0.3;
+  cursor: default;
+}
+/* line 84, ../../app/styles/atoms/_buttons.scss */
+.btn-green-big.ripple {
+  overflow: hidden;
+  position: relative;
+}
+/* line 88, ../../app/styles/atoms/_buttons.scss */
+.btn-green-big.border {
+  border: solid 0.1rem;
+}
+/* line 122, ../../app/styles/atoms/_buttons.scss */
+.btn-green-big.border {
+  border-color: #fff;
+}
+
+/* line 130, ../../app/styles/atoms/_buttons.scss */
+.btn-cancelar, .btn-cancelar-center {
+  padding: 0 1.5rem;
+  border: solid 1px #397999;
+}
+
+/* line 135, ../../app/styles/atoms/_buttons.scss */
+.btn-fechar {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  box-pack: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  padding: 2rem 0;
+}
+/* line 140, ../../app/styles/atoms/_buttons.scss */
+.btn-fechar.footer {
+  padding: 0;
+}
+
+/* line 145, ../../app/styles/atoms/_buttons.scss */
+.btn-blue-center {
+  margin: 0 auto;
+  display: block;
+  float: none !important;
+  padding: 0 3rem;
+}
+
+/* line 153, ../../app/styles/atoms/_buttons.scss */
+.btn-cancelar-center {
+  margin: 0 auto;
+  display: block;
+  float: none !important;
+  padding: 0 3rem;
+}
+
+/* line 113, ../../app/styles/atoms/_buttons.scss */
+.btn-white-small, .btn-cancelar, .btn-cancelar-center {
+  color: #397999;
+  background-color: #fff;
+  border: none;
+  padding: 0 2rem;
+  line-height: 3.2rem;
+  font-size: 1.1rem;
+}
+/* line 75, ../../app/styles/atoms/_buttons.scss */
+.btn-white-small:hover, .btn-cancelar:hover, .btn-cancelar-center:hover {
+  background: #e6e6e6;
+}
+/* line 79, ../../app/styles/atoms/_buttons.scss */
+.btn-white-small[disabled], [disabled].btn-cancelar, [disabled].btn-cancelar-center {
+  opacity: 0.3;
+  cursor: default;
+}
+/* line 84, ../../app/styles/atoms/_buttons.scss */
+.btn-white-small.ripple, .ripple.btn-cancelar, .ripple.btn-cancelar-center {
+  overflow: hidden;
+  position: relative;
+}
+/* line 88, ../../app/styles/atoms/_buttons.scss */
+.btn-white-small.border, .border.btn-cancelar, .border.btn-cancelar-center {
+  border: solid 0.1rem;
+}
+/* line 115, ../../app/styles/atoms/_buttons.scss */
+.btn-white-small.border, .border.btn-cancelar, .border.btn-cancelar-center {
+  border-color: #397999;
+}
+
+/* line 120, ../../app/styles/atoms/_buttons.scss */
+.btn-white-big {
+  color: #397999;
+  background-color: #fff;
+  border: none;
+  padding: 0 3rem;
+  line-height: 5.2rem;
+  font-size: 1.8rem;
+}
+/* line 75, ../../app/styles/atoms/_buttons.scss */
+.btn-white-big:hover {
+  background: #e6e6e6;
+}
+/* line 79, ../../app/styles/atoms/_buttons.scss */
+.btn-white-big[disabled] {
+  opacity: 0.3;
+  cursor: default;
+}
+/* line 84, ../../app/styles/atoms/_buttons.scss */
+.btn-white-big.ripple {
+  overflow: hidden;
+  position: relative;
+}
+/* line 88, ../../app/styles/atoms/_buttons.scss */
+.btn-white-big.border {
+  border: solid 0.1rem;
+}
+/* line 122, ../../app/styles/atoms/_buttons.scss */
+.btn-white-big.border {
+  border-color: #397999;
+}
+
+/* line 130, ../../app/styles/atoms/_buttons.scss */
+.btn-cancelar, .btn-cancelar-center {
+  padding: 0 1.5rem;
+  border: solid 1px #397999;
+}
+
+/* line 135, ../../app/styles/atoms/_buttons.scss */
+.btn-fechar {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  box-pack: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  padding: 2rem 0;
+}
+/* line 140, ../../app/styles/atoms/_buttons.scss */
+.btn-fechar.footer {
+  padding: 0;
+}
+
+/* line 145, ../../app/styles/atoms/_buttons.scss */
+.btn-blue-center {
+  margin: 0 auto;
+  display: block;
+  float: none !important;
+  padding: 0 3rem;
+}
+
+/* line 153, ../../app/styles/atoms/_buttons.scss */
+.btn-cancelar-center {
+  margin: 0 auto;
+  display: block;
+  float: none !important;
+  padding: 0 3rem;
+}
+
+/* line 113, ../../app/styles/atoms/_buttons.scss */
+.btn-transparent-small {
+  color: #fff;
+  background-color: transparent;
+  border: solid 1px #fff;
+  padding: 0 2rem;
+  line-height: 3.2rem;
+  font-size: 1.1rem;
+}
+/* line 75, ../../app/styles/atoms/_buttons.scss */
+.btn-transparent-small:hover {
+  background: transparent;
+}
+/* line 79, ../../app/styles/atoms/_buttons.scss */
+.btn-transparent-small[disabled] {
+  opacity: 0.3;
+  cursor: default;
+}
+/* line 84, ../../app/styles/atoms/_buttons.scss */
+.btn-transparent-small.ripple {
+  overflow: hidden;
+  position: relative;
+}
+/* line 88, ../../app/styles/atoms/_buttons.scss */
+.btn-transparent-small.border {
+  border: solid 0.1rem;
+}
+/* line 115, ../../app/styles/atoms/_buttons.scss */
+.btn-transparent-small.border {
+  border-color: #fff;
+}
+
+/* line 120, ../../app/styles/atoms/_buttons.scss */
+.btn-transparent-big {
+  color: #fff;
+  background-color: transparent;
+  border: solid 1px #fff;
+  padding: 0 3rem;
+  line-height: 5.2rem;
+  font-size: 1.8rem;
+}
+/* line 75, ../../app/styles/atoms/_buttons.scss */
+.btn-transparent-big:hover {
+  background: transparent;
+}
+/* line 79, ../../app/styles/atoms/_buttons.scss */
+.btn-transparent-big[disabled] {
+  opacity: 0.3;
+  cursor: default;
+}
+/* line 84, ../../app/styles/atoms/_buttons.scss */
+.btn-transparent-big.ripple {
+  overflow: hidden;
+  position: relative;
+}
+/* line 88, ../../app/styles/atoms/_buttons.scss */
+.btn-transparent-big.border {
+  border: solid 0.1rem;
+}
+/* line 122, ../../app/styles/atoms/_buttons.scss */
+.btn-transparent-big.border {
+  border-color: #fff;
+}
+
+/* line 130, ../../app/styles/atoms/_buttons.scss */
+.btn-cancelar, .btn-cancelar-center {
+  padding: 0 1.5rem;
+  border: solid 1px #397999;
+}
+
+/* line 135, ../../app/styles/atoms/_buttons.scss */
+.btn-fechar {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  box-pack: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  padding: 2rem 0;
+}
+/* line 140, ../../app/styles/atoms/_buttons.scss */
+.btn-fechar.footer {
+  padding: 0;
+}
+
+/* line 145, ../../app/styles/atoms/_buttons.scss */
+.btn-blue-center {
+  margin: 0 auto;
+  display: block;
+  float: none !important;
+  padding: 0 3rem;
+}
+
+/* line 153, ../../app/styles/atoms/_buttons.scss */
+.btn-cancelar-center {
+  margin: 0 auto;
+  display: block;
+  float: none !important;
+  padding: 0 3rem;
+}
+
 /* line 1, ../../app/styles/organisms/_form-filmes.scss */
 .form-filmes {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 30px;
   padding: 20px;
   background-color: #fff;
 }
-/* line 5, ../../app/styles/organisms/_form-filmes.scss */
+/* line 20, C:/git/moviesWatched/bower_components/bourbon/app/assets/stylesheets/addons/_clearfix.scss */
+.form-filmes::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 7, ../../app/styles/organisms/_form-filmes.scss */
 .form-filmes h1 {
   font-size: 2em;
   margin-top: 0;
 }
-/* line 9, ../../app/styles/organisms/_form-filmes.scss */
-.form-filmes .form-campo {
-  margin-bottom: 10px;
-}
 /* line 11, ../../app/styles/organisms/_form-filmes.scss */
-.form-filmes .form-campo.pequeno input {
-  width: 100px;
+.form-filmes .title {
+  float: left;
+  display: block;
+  margin-right: 1.69492%;
+  width: 100%;
 }
-/* line 14, ../../app/styles/organisms/_form-filmes.scss */
-.form-filmes .form-campo.medio input {
-  width: 50%;
+/* line 89, C:/git/moviesWatched/bower_components/neat/app/assets/stylesheets/grid/_span-columns.scss */
+.form-filmes .title:last-child {
+  margin-right: 0;
 }
-/* line 17, ../../app/styles/organisms/_form-filmes.scss */
-.form-filmes .form-campo label {
-  display: inline-block;
-  margin-bottom: 3px;
+/* line 15, ../../app/styles/organisms/_form-filmes.scss */
+.form-filmes .ano {
+  float: left;
+  display: block;
+  margin-right: 1.69492%;
+  width: 23.72881%;
 }
-/* line 22, ../../app/styles/organisms/_form-filmes.scss */
-.form-filmes footer {
-  margin-top: 30px;
-  text-align: right;
+/* line 89, C:/git/moviesWatched/bower_components/neat/app/assets/stylesheets/grid/_span-columns.scss */
+.form-filmes .ano:last-child {
+  margin-right: 0;
+}
+/* line 19, ../../app/styles/organisms/_form-filmes.scss */
+.form-filmes .produtora {
+  float: left;
+  display: block;
+  margin-right: 1.69492%;
+  width: 66.10169%;
+  margin-right: 0;
+}
+/* line 89, C:/git/moviesWatched/bower_components/neat/app/assets/stylesheets/grid/_span-columns.scss */
+.form-filmes .produtora:last-child {
+  margin-right: 0;
+}
+/* line 24, ../../app/styles/organisms/_form-filmes.scss */
+.form-filmes .cartaz {
+  float: left;
+  display: block;
+  margin-right: 1.69492%;
+  width: 49.15254%;
+}
+/* line 89, C:/git/moviesWatched/bower_components/neat/app/assets/stylesheets/grid/_span-columns.scss */
+.form-filmes .cartaz:last-child {
+  margin-right: 0;
 }
 /* line 27, ../../app/styles/organisms/_form-filmes.scss */
-.form-filmes button[type="submit"] {
-  background-color: #8CC152;
-  color: #fff;
+.form-filmes .sinopse {
+  float: left;
+  display: block;
+  margin-right: 1.69492%;
+  width: 100%;
 }
-/* line 30, ../../app/styles/organisms/_form-filmes.scss */
-.form-filmes button[type="submit"]:hover {
-  background-color: #A0D468;
+/* line 89, C:/git/moviesWatched/bower_components/neat/app/assets/stylesheets/grid/_span-columns.scss */
+.form-filmes .sinopse:last-child {
+  margin-right: 0;
 }
-/* line 34, ../../app/styles/organisms/_form-filmes.scss */
-.form-filmes button[type="reset"] {
-  background-color: #AAB2BD;
-  color: #fff;
+/* line 31, ../../app/styles/organisms/_form-filmes.scss */
+.form-filmes .preview-image {
+  background-size: cover !important;
+  width: 20rem;
+  height: 20rem;
+  border: solid 1px #333;
 }
-/* line 37, ../../app/styles/organisms/_form-filmes.scss */
-.form-filmes button[type="reset"]:hover {
-  background-color: #CCD1D9;
+/* line 39, ../../app/styles/organisms/_form-filmes.scss */
+.form-filmes .preview-cartaz {
+  float: left;
+  display: block;
+  margin-right: 1.69492%;
+  width: 40.67797%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  float: right;
+}
+/* line 89, C:/git/moviesWatched/bower_components/neat/app/assets/stylesheets/grid/_span-columns.scss */
+.form-filmes .preview-cartaz:last-child {
+  margin-right: 0;
+}
+/* line 46, ../../app/styles/organisms/_form-filmes.scss */
+.form-filmes footer {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 3rem;
+  float: left;
+  text-align: right;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 
 /* line 2, ../../app/styles/templates/_lista-filmes.scss */
@@ -1216,26 +2179,32 @@ th {
   margin: 0;
 }
 
-/* line 5, ../../app/styles/_base.scss */
+/* line 5, ../../app/styles/templates/_base.scss */
 * {
   box-sizing: border-box;
 }
 
-/* line 9, ../../app/styles/_base.scss */
+/* line 9, ../../app/styles/templates/_base.scss */
+html, body {
+  font-size: 10px;
+}
+
+/* line 15, ../../app/styles/templates/_base.scss */
 body {
+  font-size: 1.6rem;
   font-family: 'Roboto Condensed', sans-serif;
   padding: 0 20px 200px;
   background-color: #f1f1f1;
 }
 
-/* line 15, ../../app/styles/_base.scss */
+/* line 22, ../../app/styles/templates/_base.scss */
 h1 {
   font-size: 3em;
 }
 
-/* line 19, ../../app/styles/_base.scss */
+/* line 26, ../../app/styles/templates/_base.scss */
 .container {
-  width: 780px;
+  width: 80rem;
   max-width: 90vw;
   margin: 0 auto;
 }

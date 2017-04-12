@@ -6,6 +6,8 @@
 
     $scope.filmes = [];
 
+  
+
     var carregarFilmes = function(){
       myMovies.listar().then(function(filmes){
         $scope.filmes = filmes;
@@ -33,6 +35,16 @@
       myMovies.delete(id).then(carregarFilmes);
     }
 
+    $scope.showImage = function(){
+        if( $scope.novoFilme.cartaz == null ||  $scope.novoFilme.cartaz == undefined) $scope.exibeImagem = false;
+        
+        else{
+            $scope.exibeImagem = true;
+           
+        }
+       
+
+    }
 
 
     carregarFilmes();

@@ -9,6 +9,7 @@
     <script src="scripts/app.js"></script>
     <script src="scripts/movies.controller.js"></script>
     <script src="scripts/factorys/my-movies.factory.js"></script>
+    <script src="scripts/components/movieDirective/movie.directive.js"></script>
     
     
 </head>
@@ -22,32 +23,36 @@
 
         <hr>
 
-        <form name="formulario" class="form-filmes" ng-submit="criarFilme()">
+        <form name="formulario" class="form-filmes" ng-submit="criarFilme()" novalidate>
             <h1>Adicionar Filme</h1>
-            <div class="form-campo">
+            <fieldset class="title">
                 <label for="titulo">Titulo</label>
-                <input type="text" id="titulo" name="titulo" ng-model="novoFilme.titulo">
-            </div>
-            <div class="form-campo pequeno">
+                <input type="text" id="titulo" name="titulo" ng-model="novoFilme.titulo" required>
+            </fieldset>
+            <fieldset class="ano">
                 <label for="ano">Ano de Lançamento</label>
-                <input type="number" id="ano" name="ano" ng-model="novoFilme.ano">
-            </div>
-            <div class="form-campo medio">
+                <input type="number" id="ano" name="ano" ng-model="novoFilme.ano" required>
+            </fieldset>
+            <fieldset class="produtora">
                 <label for="produtora">Produtora</label>
                 <input type="text" id="produtora" name="produtora" ng-model="novoFilme.produtora">
-            </div>
-            <div class="form-campo">
+            </fieldset>
+            <fieldset class="cartaz">
                 <label for="cartaz">Url do Cartaz</label>
-                <input type="text" id="cartaz" name="cartaz" ng-model="novoFilme.cartaz">
-            </div>
-            <div class="form-campo">
+                <input type="text" id="cartaz" name="cartaz" ng-model="novoFilme.cartaz" ng-change="showImage()">
+            </fieldset>
+            <fieldset class="preview-cartaz">
+               <label>Preview do Cartaz</label>
+               <div style="background:url('{{novoFilme.cartaz}}') no-repeat;" class="preview-image">
+            </fieldset>
+            <fieldset class="sinopse">
                 <label for="sinopse">Sinopse</label>
                 <textarea id="sinopse" name="sinopse" ng-model="novoFilme.sinopse" rows="5"></textarea>
-            </div>
+            </fieldset>
 
             <footer>
-                <button type="reset">Limpar</button>
-                <button type="submit">Salvar</button>
+                <button class="btn-cancelar" type="reset">Limpar</button>
+                <button class="btn-green-small"type="submit">Salvar</button>
             </footer>
         </form>
     </div>

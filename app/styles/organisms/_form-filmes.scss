@@ -1,4 +1,6 @@
 .form-filmes {
+  @extend.form;
+  @include outer-container(100%);
   margin-top: 30px;
   padding: 20px;
   background-color: #fff;
@@ -6,37 +8,48 @@
     font-size: 2em;
     margin-top: 0;
   }
-  .form-campo {
-    margin-bottom: 10px;
-    &.pequeno input {
-      width: 100px;
-    }
-    &.medio input {
-      width: 50%;
-    }
-    label {
-      display: inline-block;
-      margin-bottom: 3px;
-    }
+  .title {
+    @include span-columns(12);
+  } 
+
+  .ano{
+    @include span-columns(3);
   }
+
+  .produtora{
+    @include span-columns(8);
+    @include omega;
+  }
+
+  .cartaz{
+    @include span-columns(6);
+  }
+  .sinopse{
+    @include span-columns(12);
+  }
+
+  .preview-image{
+    background-size:cover !important; 
+    width:20rem; 
+    height:20rem;
+    border:solid 1px $colorOne;
+    
+  }
+
+  .preview-cartaz{
+    @include span-columns(5);
+    display: flex;
+    flex-direction: column;
+    float:right;
+  }
+
   footer {
-    margin-top: 30px;
+    width:100%;
+    display: flex;
+    margin-top: 3rem;
+    float:left;
     text-align: right;
+    justify-content: space-between;
   }
-  button {
-    &[type="submit"] {
-      background-color: #8CC152;
-      color: #fff;
-      &:hover {
-        background-color: #A0D468;
-      }
-    }
-    &[type="reset"] {
-      background-color: #AAB2BD;
-      color: #fff;
-      &:hover {
-        background-color: #CCD1D9;
-      }
-    }
-  }
+ 
 }

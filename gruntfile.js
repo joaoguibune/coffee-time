@@ -22,7 +22,7 @@ module.exports = function (grunt) {
                 },
             },
             sass: {
-                files: ['<%= config.app %>styles/*.scss'],
+                files: ['<%= config.app %>styles/**/*.scss'],
                 tasks: ['sass'],
                 options: {
                     interrupt: true

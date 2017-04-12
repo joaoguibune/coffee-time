@@ -1,0 +1,42 @@
+.form-filmes {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fff;
+  h1 {
+    font-size: 2em;
+    margin-top: 0;
+  }
+  .form-campo {
+    margin-bottom: 10px;
+    &.pequeno input {
+      width: 100px;
+    }
+    &.medio input {
+      width: 50%;
+    }
+    label {
+      display: inline-block;
+      margin-bottom: 3px;
+    }
+  }
+  footer {
+    margin-top: 30px;
+    text-align: right;
+  }
+  button {
+    &[type="submit"] {
+      background-color: #8CC152;
+      color: #fff;
+      &:hover {
+        background-color: #A0D468;
+      }
+    }
+    &[type="reset"] {
+      background-color: #AAB2BD;
+      color: #fff;
+      &:hover {
+        background-color: #CCD1D9;
+      }
+    }
+  }
+}

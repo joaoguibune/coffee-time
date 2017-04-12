@@ -1,0 +1,23 @@
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css);
+
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+	padding: 0 20px 200px;
+	background-color: #f1f1f1;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+.container {
+	width: 780px;
+	max-width: 90vw;
+	margin: 0 auto;
+}

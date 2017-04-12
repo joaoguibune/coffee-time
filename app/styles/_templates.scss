@@ -1,7 +1,0 @@
-.container{
-    @include outer-container;
-
-    .navbar-nav, .content{
-        @include span-columns(12);
-    }
-}

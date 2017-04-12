@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html ng-app="filmes">
+<html ng-app="movies">
 <head>
     <meta charset="UTF-8">
     <title>Movies Watched</title>
 
-    <link rel="stylesheet" href="css/style.css">
-
-    <script src="bower_components/angular.min.js"></script>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="bower_components/angular/angular.min.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/movies.controller.js"></script>
+    <script src="scripts/factorys/my-movies.factory.js"></script>
+    
     
 </head>
 <body>
-    <div class="container" ng-controller="FilmesController">
+    <div class="container" ng-controller="moviesController">
         <h1>{{ titulo }}</h1>
 
         <div class="lista-filmes">
@@ -24,7 +25,7 @@
         <form name="formulario" class="form-filmes" ng-submit="criarFilme()">
             <h1>Adicionar Filme</h1>
             <div class="form-campo">
-                <label for="titulo">T�tulo</label>
+                <label for="titulo">Titulo</label>
                 <input type="text" id="titulo" name="titulo" ng-model="novoFilme.titulo">
             </div>
             <div class="form-campo pequeno">

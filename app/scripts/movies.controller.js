@@ -1,13 +1,13 @@
 (function(){
   angular
   .module('movies')
-  .controller('moviesController', function($scope) {
+  .controller('moviesController', function($scope, myMovies) {
     $scope.titulo = "Filmes que já assisti";
 
     $scope.filmes = [];
 
     var carregarFilmes = function(){
-      MeusFilmes.listar().then(function(filmes){
+      myMovies.listar().then(function(filmes){
         $scope.filmes = filmes;
       });
     }
@@ -24,14 +24,16 @@
         cartaz: $scope.novoFilme.cartaz
       };
 
-      MeusFilmes.inserir(filme).then(carregarFilmes);
+      myMovies.insert(filme).then(carregarFilmes);
 
       $scope.novoFilme = {};
     }
 
     $scope.removerFilme = function(id) {
-      MeusFilmes.remover(id).then(carregarFilmes);
+      myMovies.delete(id).then(carregarFilmes);
     }
+
+
 
     carregarFilmes();
 

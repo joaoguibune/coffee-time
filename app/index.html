@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html ng-app="movies">
+<html ng-app="coffee">
 <head>
     <meta charset="UTF-8">
-    <title>Movies Watched</title>
+    <title>Coffee Time</title>
 
     <link rel="stylesheet" href="styles/main.css">
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="scripts/app.js"></script>
-    <script src="scripts/movies.controller.js"></script>
-    <script src="scripts/factorys/my-movies.factory.js"></script>
-    <script src="scripts/components/movieDirective/movie.directive.js"></script>
+    <script src="scripts/coffee.controller.js"></script>
+    <script src="scripts/factorys/coffee.factory.js"></script>
+    <script src="scripts/components/coffeeDirective/coffee.directive.js"></script>
     
     
 </head>
 <body>
-    <div class="container" ng-controller="moviesController">
+    <div class="container" ng-controller="coffeeController">
         <h1>{{ titulo }}</h1>
 
         <div class="lista-filmes">
-            <div aw-filme="f" fn-fechar="removerFilme(f.id)" ng-repeat="f in filmes"></div>
+            <div aw-coffee="u" fn-fechar="removerUser(u.id)" ng-repeat="u in users"></div>
         </div>
 
         <hr>
 
-        <form name="formulario" class="form-filmes" ng-submit="criarFilme()" novalidate>
+        <!--<form name="formulario" class="form-filmes" ng-submit="criarFilme()" novalidate>
             <h1>Adicionar Filme</h1>
             <fieldset class="title">
                 <label for="titulo">Titulo</label>
@@ -54,7 +54,7 @@
                 <button class="btn-cancelar" type="reset">Limpar</button>
                 <button class="btn-green-small"type="submit">Salvar</button>
             </footer>
-        </form>
+        </form>-->
     </div>
 
 </body>

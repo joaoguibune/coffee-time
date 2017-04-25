@@ -321,7 +321,7 @@ module.exports = function (grunt) {
                 assetsDirs: [
                     '<%= yeoman.dist %>',
                     '<%= yeoman.dist %>/images',
-                    '<%= yeoman.dist %>/docs',
+                    '<%= yeoman.dist %>/scripts',
                     '<%= yeoman.dist %>/fonts/{,**/}',
                     '<%= yeoman.dist %>/styles',
                     '<%= yeoman.dist %>/data'
@@ -339,38 +339,38 @@ module.exports = function (grunt) {
         // By default, your `index.html`'s <!-- Usemin block --> will take care of
         // minification. These next options are pre-configured if you do not wish
         // to use the Usemin blocks.
-        // cssmin: {
-        //   dist: {
-        //     files: {
-        //       '<%= yeoman.dist %>/styles/main.css': [
-        //         '.tmp/styles/{,*/}*.css'
-        //       ]
-        //     }
-        //   }
-        // },
-        // uglify: {
-        //     options : {
-        //         sourceMap : true,
-        //         sourceMapIncludeSources : true,
-        //         sourceMapIn : '.tmp/main.js.map'
-        //     },
-        //   dist: {
-        //     files: {
-        //       '<%= yeoman.dist %>/scripts/scripts.js': [
-        //         '<%= yeoman.dist %>/scripts/scripts.js'
-        //       ]
-        //     }
-        //   }
-        // },
-        // concat: {
-        //     options:{
-        //       sourceMap : true
-        //     },
-        //   dist: {
-        //       src  : ['www/js/**/*.js'],
-        //           dest:'.tmp/main.js'
-        //   }
-        // },
+        cssmin: {
+          dist: {
+            files: {
+              '<%= yeoman.dist %>/styles/main.css': [
+                '.tmp/styles/{,*/}*.css'
+              ]
+            }
+          }
+        },
+        uglify: {
+            options : {
+                sourceMap : true,
+                sourceMapIncludeSources : true,
+                sourceMapIn : '.tmp/main.js.map'
+            },
+          dist: {
+            files: {
+              '<%= yeoman.dist %>/scripts/scripts.js': [
+                '<%= yeoman.dist %>/scripts/scripts.js'
+              ]
+            }
+          }
+        },
+        concat: {
+            options:{
+              sourceMap : true
+            },
+          dist: {
+              src  : ['www/js/**/*.js'],
+                  dest:'.tmp/main.js'
+          }
+        },
 
         imagemin: {
             dist: {
@@ -542,7 +542,7 @@ module.exports = function (grunt) {
         'copy:dist',
         'cdnify',
         'cssmin',
-        'uglify',
+         'uglify',
         'filerev',
         'usemin',
         'htmlmin'

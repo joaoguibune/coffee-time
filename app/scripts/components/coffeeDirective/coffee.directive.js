@@ -1,11 +1,11 @@
-angular.module("movies").directive("awFilme", function () {
+angular.module("coffee").directive("awCoffee", function () {
   return {
     restrict: "A",
     scope: {
-      filme: '=awFilme',
+      coffee: '=awCoffee',
       fnFechar: '&'
     },
-    templateUrl: "scripts/components/movieDirective/movie.directive.html",
+    templateUrl: "scripts/components/coffeeDirective/coffee.directive.html",
     link: function (scope, element, attr) {
       element.addClass('filme com-cartaz');
 

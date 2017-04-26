@@ -1,0 +1,15 @@
+.lista-coffees{
+    .coffee-tab{
+        display:block;
+        float:left;
+        background:#fff;
+        width:100%;
+        padding:4rem;
+
+        .card-image{
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+        }
+    }
+}

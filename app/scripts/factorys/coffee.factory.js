@@ -8,13 +8,14 @@ angular.module("coffee").factory("myCoffees", function($q,$http){
 			$http.get("https://coffee-time-1c2fc.firebaseio.com/lancamentos.json").then(
 				function(result){
 					var users = [];
-
+					
 					angular.forEach(result.data, function(user, id){
 						user.id = id;
+						
 						users.push(user);
 					});
 
-					promessa.resolve(cafes);
+					promessa.resolve(users);
 				}
 			);
 

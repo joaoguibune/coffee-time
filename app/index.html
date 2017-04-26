@@ -1,61 +1,117 @@
 <!DOCTYPE html>
 <html ng-app="coffee">
+
 <head>
     <meta charset="UTF-8">
     <title>Coffee Time</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+
     <link rel="stylesheet" href="styles/main.css">
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="bower_components/angular-locale-pt-br/angular-locale_pt-br.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/restangular/dist/restangular.js"></script>
+    <script src="bower_components/angular-input-masks/angular-input-masks-standalone.js"></script>
+    <script src="bower_components/string-mask/src/string-mask.js"></script>
+    <script src="bower_components/br-masks/releases/br-masks.js"></script>
+    <script src="bower_components/angular-br-filters/release/angular-br-filters.js"></script>
+    <script src="bower_components/perfect-scrollbar/js/perfect-scrollbar.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/coffee.controller.js"></script>
     <script src="scripts/factorys/coffee.factory.js"></script>
     <script src="scripts/components/coffeeDirective/coffee.directive.js"></script>
-    
-    
-</head>
-<body>
-    <div class="container" ng-controller="coffeeController">
-        <h1>{{ titulo }}</h1>
 
-        <div class="lista-filmes">
-            <div aw-coffee="u" fn-fechar="removerUser(u.id)" ng-repeat="u in users"></div>
+
+</head>
+
+<body>
+
+    <div class="container" ng-controller="coffeeController">
+        <div class="lista-coffees">
+            <nav>
+                <div class="nav-wrapper red darken-4">
+                    <a href="#" class="brand-logo center">Cafeeiros da Inlog</a>
+                </div>
+            </nav>
+            <ul id="coffee-menu" class="tabs center">
+                <li class="tab col s6"><a href="#historico">Histórico</a></li>
+                <li class="tab col s6"><a href="#novo" class="active">Inserir café</a></li>
+                <li class="tab col s6"><a href="#ranking">Ranking</a></li>
+
+            </ul>
+            <div id="historico" class="col s12 coffee-tab">
+                <div ng-repeat="user in users">
+                    <div class="col s12 m7" ng-repeat="item in user.itens">
+                        <h2 class="header">{{user.name}}</h2>
+                        <div class="card horizontal">
+                            <div class="card-image">
+                                <img src="http://www.celeiro.com.br/cache/2/0/5/a/a/205aa37407bff757aed28274595a5d1cdb2787c6.png" height=50>
+                            </div>
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <ul>
+                                        <li><strong>Data: </strong>{{item.date}}</li>
+                                        <li><strong>Valor: </strong>{{item.value | currency}}</li>
+                                        <li><strong>Quantidade: </strong>{{item.qtd}}</li>
+                                        <li><strong>Tamanho: </strong>{{item.weight}} g</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="novo" class="col s12  coffee-tab">
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <select id="cafeeiro" ng-model="userUpdate.id" ng-options="u.id as u.name for u in users" class="browser-default">
+                                    <option value="">Cafeeiro</option>
+                                </select>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="date" type="date" class="datepicker" ng-model="userUpdate.itens[0].date">
+                                <label for="date">Data</label>
+                            </div>
+                             <div class="input-field col s6">
+                                <input id="valor" type="text" class="validate" ng-model="userUpdate.itens[0].value">
+                                <label for="valor">Valor</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="peso" type="text" class="validate" ng-model="userUpdate.itens[0].weight">
+                                <label for="peso">Peso</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="quantidade" type="text" class="validate" ng-model="userUpdate.itens[0].qtd">
+                                <label for="quantidade">Quantidade</label>
+                               
+                            </div>
+                                                        
+                        </div>
+                        <a class="waves-effect waves-light btn" ng-click="updateUser(userUpdate)" style="float:right">Salvar</a>
+                    </form>
+                </div>
+
+            </div>
+            <div id="ranking" class="col s12  coffee-tab">
+
+                <div class="collection">
+                    <a href="#!" class="collection-item" ng-repeat="user in users | orderBy:total"><span class="badge">{{user.total}}</span>{{user.name}}</a>
+                </div>
+            </div>
+
         </div>
 
-        <hr>
 
-        <!--<form name="formulario" class="form-filmes" ng-submit="criarFilme()" novalidate>
-            <h1>Adicionar Filme</h1>
-            <fieldset class="title">
-                <label for="titulo">Titulo</label>
-                <input type="text" id="titulo" name="titulo" ng-model="novoFilme.titulo" required>
-            </fieldset>
-            <fieldset class="ano">
-                <label for="ano">Ano de Lançamento</label>
-                <input type="number" id="ano" name="ano" ng-model="novoFilme.ano" required>
-            </fieldset>
-            <fieldset class="produtora">
-                <label for="produtora">Produtora</label>
-                <input type="text" id="produtora" name="produtora" ng-model="novoFilme.produtora">
-            </fieldset>
-            <fieldset class="cartaz">
-                <label for="cartaz">Url do Cartaz</label>
-                <input type="text" id="cartaz" name="cartaz" ng-model="novoFilme.cartaz" ng-change="showImage()">
-            </fieldset>
-            <fieldset class="preview-cartaz">
-               <label>Preview do Cartaz</label>
-               <div style="background:url('{{novoFilme.cartaz}}') no-repeat;" class="preview-image">
-            </fieldset>
-            <fieldset class="sinopse">
-                <label for="sinopse">Sinopse</label>
-                <textarea id="sinopse" name="sinopse" ng-model="novoFilme.sinopse" rows="5"></textarea>
-            </fieldset>
 
-            <footer>
-                <button class="btn-cancelar" type="reset">Limpar</button>
-                <button class="btn-green-small"type="submit">Salvar</button>
-            </footer>
-        </form>-->
     </div>
 
 </body>
+
 </html>

@@ -1,8 +1,0 @@
-angular.module('moviesWatched').run(['$templateCache', function($templateCache) {
-  'use strict';
-
-  $templateCache.put('scripts/components/movieDirective/movie.directive.html',
-    "<h1>{{ filme.titulo }}</h1> <button class=\"del\" title=\"Excluir\" ng-click=\"fnFechar()\"></button> <img ng-if=\"filme.cartaz\" ng-src=\"{{ filme.cartaz }}\" alt=\"Cartaz {{ filme.titulo }}\"> <ul> <li><strong>Ano:</strong> {{ filme.ano }}</li> <li><strong>Produtora:</strong> {{ filme.produtora }}</li> </ul> <p>{{ filme.sinopse }}</p>"
-  );
-
-}]);

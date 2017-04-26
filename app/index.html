@@ -37,15 +37,27 @@
                     <a href="#" class="brand-logo center">Cafeeiros da Inlog</a>
                 </div>
             </nav>
+            <div class="row  ">
+                <div class="col s12 m6 center-align" style="margin-left: 300px;">
+                    <div class="card blue-grey darken-1">
+                        <div class="card-content white-text">
+                            <span class="card-title">Próximo comprador:</span>
+                            <h2>{{next_buyer.name}}</h2>
+                            <p>Última compra efetuada em: {{next_buyer.last_buy | date:'dd/MM/yyyy'}}</p>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
             <ul id="coffee-menu" class="tabs center">
-                <li class="tab col s6"><a href="#historico">Histórico</a></li>
-                <li class="tab col s6"><a href="#novo" class="active">Inserir café</a></li>
+                <li class="tab col s6"><a href="#historico" class="active">Histórico</a></li>
+                <li class="tab col s6"><a href="#novo">Inserir café</a></li>
                 <li class="tab col s6"><a href="#ranking">Ranking</a></li>
 
             </ul>
             <div id="historico" class="col s12 coffee-tab">
-                <div ng-repeat="user in users">
-                    <div class="col s12 m7" ng-repeat="item in user.itens">
+                <div ng-repeat="user in usersList | orderBy:'-date'">
+                    <div class="col s12 m7">
                         <h2 class="header">{{user.name}}</h2>
                         <div class="card horizontal">
                             <div class="card-image">
@@ -54,10 +66,10 @@
                             <div class="card-stacked">
                                 <div class="card-content">
                                     <ul>
-                                        <li><strong>Data: </strong>{{item.date}}</li>
-                                        <li><strong>Valor: </strong>{{item.value | currency}}</li>
-                                        <li><strong>Quantidade: </strong>{{item.qtd}}</li>
-                                        <li><strong>Tamanho: </strong>{{item.weight}} g</li>
+                                        <li><strong>Data: </strong>{{user.date | date:'dd/MM/yyyy hh:mm:ss'}}</li>
+                                        <li><strong>Valor: </strong>{{user.value | currency}}</li>
+                                        <li><strong>Quantidade: </strong>{{user.qtd}}</li>
+                                        <li><strong>Tamanho: </strong>{{user.weight}} g</li>
                                     </ul>
                                 </div>
                             </div>
@@ -76,23 +88,23 @@
                                 </select>
                             </div>
                             <div class="input-field col s6">
-                                <input id="date" type="date" class="datepicker" ng-model="userUpdate.itens[0].date">
-                                <label for="date">Data</label>
+
+                                <input id="date" type="date" ng-model="userUpdate.itens[0].date">
                             </div>
-                             <div class="input-field col s6">
-                                <input id="valor" type="text" class="validate" ng-model="userUpdate.itens[0].value">
+                            <div class="input-field col s6">
+                                <input id="valor" type="text" name="valor " class="validate" ng-model="userUpdate.itens[0].value" ui-money-mask required>
                                 <label for="valor">Valor</label>
                             </div>
                             <div class="input-field col s6">
-                                <input id="peso" type="text" class="validate" ng-model="userUpdate.itens[0].weight">
-                                <label for="peso">Peso</label>
+                                <input id="peso" type="number" class="validate" min="50" ng-model="userUpdate.itens[0].weight">
+                                <label for="peso">Peso (g)</label>
                             </div>
                             <div class="input-field col s6">
-                                <input id="quantidade" type="text" class="validate" ng-model="userUpdate.itens[0].qtd">
+                                <input id="quantidade" type="number" class="validate" min="1" ng-model="userUpdate.itens[0].qtd">
                                 <label for="quantidade">Quantidade</label>
-                               
+
                             </div>
-                                                        
+
                         </div>
                         <a class="waves-effect waves-light btn" ng-click="updateUser(userUpdate)" style="float:right">Salvar</a>
                     </form>
@@ -102,7 +114,10 @@
             <div id="ranking" class="col s12  coffee-tab">
 
                 <div class="collection">
-                    <a href="#!" class="collection-item" ng-repeat="user in users | orderBy:total"><span class="badge">{{user.total}}</span>{{user.name}}</a>
+                    <a href="#!" class="collection-item" ng-repeat="user in users | orderBy:'-totalQtd' "><span class="badge">
+                        {{user.totalQtd}} <span ng-if="user.totalQtd != 1">Cafés</span><span ng-if="user.totalQtd == 1">Café</span></span>
+                        {{$index + 1}}º {{user.name}}
+                    </a>
                 </div>
             </div>
 
